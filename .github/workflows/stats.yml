@@ -5,13 +5,8 @@ on:
     - cron: "0 11 * * *" # every 24 hours
   push:
     branches:
-      - master
+      - main
   workflow_dispatch:
-    inputs:
-      message:
-        type: string
-        required: false
-        description: "Hi!"
 
 jobs:
   publish:
