@@ -24,6 +24,12 @@ jobs:
         uses: gill876/profile-readme-stats@master
         with:
           token: ${{ secrets.USER_TOKEN }}
+      - name: Generate README.ja.md
+        uses: gill876/profile-readme-stats@master
+        with:
+          token: ${{ secrets.USER_TOKEN }}
+          template: ./TEMPLATE.ja.md
+          readme: ./README.ja.md
       - name: Update README.md
         shell: bash
         run: |
