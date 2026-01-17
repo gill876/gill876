@@ -6,6 +6,12 @@ on:
   push:
     branches:
       - master
+  workflow_dispatch:
+    inputs:
+      message:
+        type: string
+        required: false
+        description: "Hi!"
 
 jobs:
   publish:
