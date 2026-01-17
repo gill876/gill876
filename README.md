@@ -1,5 +1,10 @@
 ## Hi there 👋
 
+[![en](https://img.shields.io/badge/lang-en-red.svg)](README.md)
+[![jp](https://img.shields.io/badge/lang-ja-green.svg)](README.ja.md)
+
+[日本語](README.ja.md)
+
 <!--
 **gill876/gill876** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
