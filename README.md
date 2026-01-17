@@ -3,7 +3,7 @@
 [![en](https://img.shields.io/badge/lang-en-blue.svg)](README.md)
 [![jp](https://img.shields.io/badge/lang-日本語-red.svg)](README.ja.md)
 
-I joined GitHub **7** years ago and since then I have pushed **4760** commits, opened **5** issues, submitted **1087** PRs, received **3** stars across **40** personal projects and contributed to **0** public repositories.  
+I joined GitHub **7** years ago and since then I have pushed **4762** commits, opened **5** issues, submitted **1087** PRs, received **3** stars across **40** personal projects and contributed to **0** public repositories.  
 
 Currently on a **{{ COMMIT_STREAK }}** day commit streak.
 
