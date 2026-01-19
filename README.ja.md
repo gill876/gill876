@@ -5,7 +5,9 @@
 [![en](https://img.shields.io/badge/lang-en-blue.svg)](README.md)
 [![jp](https://img.shields.io/badge/lang-日本語-red.svg)](README.ja.md)
 
-**7**前、GitHubに登録して、**4770**つのコミットを追加しました。
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Cargill%20Seiveright-blue.svg)](https://www.linkedin.com/in/cargill-s-a074b3125/)
+
+**7**前、GitHubに登録して、**4772**つのコミットを追加しました。
 
 <!--
 **gill876/gill876** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
