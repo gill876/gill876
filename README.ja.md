@@ -1,9 +1,11 @@
-## こんにちは 👋
+<div align="center">
+  <img style="width: 100%; border-radius: 6px;" src="assets/img/GitHub-Cover-ja.png" />
+</div>
 
 [![en](https://img.shields.io/badge/lang-en-blue.svg)](README.md)
 [![jp](https://img.shields.io/badge/lang-日本語-red.svg)](README.ja.md)
 
-**7**前、GitHubに登録して、**4766**つのコミットを追加しました。
+**7**前、GitHubに登録して、**4768**つのコミットを追加しました。
 
 <!--
 **gill876/gill876** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
