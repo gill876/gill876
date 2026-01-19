@@ -20,6 +20,17 @@ I like getting things to work first, then making them better by learning through
 | *hobbies*                             | `music`, `podcast`, `reading` ([Goodreads](https://www.goodreads.com/user/show/190731384-cargill-seiveright)), `hiking`, `skiing`, `onsen`|
 | *linkedin* | [`cargill seiveright`](https://www.linkedin.com/in/cargill-s-a074b3125/)|
 
+<picture>
+  <source
+    media="(prefers-color-scheme: dark)"
+    srcset="assets/img/breakout-dark.svg"
+  />
+  <source
+    media="(prefers-color-scheme: light)"
+    srcset="assets/img/breakout-light.svg"
+  />
+  <img alt="Breakout Game" src="assets/img/breakout-light.svg" />
+</picture>
 
 <!--
 **gill876/gill876** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
