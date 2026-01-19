@@ -3,23 +3,20 @@
 </div>
 
 [![en](https://img.shields.io/badge/lang-en-blue.svg)](README.md)
-[![jp](https://img.shields.io/badge/lang-日本語-red.svg)](README.ja.md)
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Cargill%20Seiveright-blue.svg)](https://www.linkedin.com/in/cargill-s-a074b3125/)
+#### 🔍 概要
 
-**{{ ACCOUNT_AGE }}**前、GitHubに登録して、**{{ COMMITS }}**つのコミットを追加しました。
+まず動かして全体像を掴み、そこから改善を重ねていく。試行錯誤を通じて、実践的な課題解決を学ぶことが好きです。
 
-<!--
-**gill876/gill876** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+#### 💡 ちょっとした情報
 
-Here are some ideas to get you started:
+| **属性**                             | **値**                          |
+| :---                                | :---                               |
+| *使用言語*                            | `英語` (ネイティブ), `ジャマイカ・クレオール語` (ネイティブ), `日本語` (n2)|
+| *プログラミング*                       | `python`, `java`, `ruby`, `javascript`           |
+| *GitHub登録*                         | `{{ ACCOUNT_AGE }} years ago`      |
+| *リポジトリ数*                        | `{{ REPOSITORIES }}`               |
+| *コミット数*                          | `{{ COMMITS }}`                    |
+| *趣味*                               | `音楽`, `ポッドキャスト`, `読書` ([Goodreads](https://www.goodreads.com/user/show/190731384-cargill-seiveright)), `ハイキング`, `スキー`, `温泉`|
+| *linkedin* | [`cargill seiveright`](https://www.linkedin.com/in/cargill-s-a074b3125/)|
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->

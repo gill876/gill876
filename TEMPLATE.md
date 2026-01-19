@@ -2,12 +2,24 @@
   <img style="width: 100%; border-radius: 6px;" src="assets/img/GitHub-Cover-en.png" />
 </div>
 
-[![en](https://img.shields.io/badge/lang-en-blue.svg)](README.md)
 [![jp](https://img.shields.io/badge/lang-日本語-red.svg)](README.ja.md)
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Cargill%20Seiveright-blue.svg)](https://www.linkedin.com/in/cargill-s-a074b3125/)
+#### 🔍 Overview
 
-I joined GitHub **{{ ACCOUNT_AGE }}** years ago and since then I have pushed **{{ COMMITS }}** commits, opened **{{ ISSUES }}** issues, submitted **{{ PULL_REQUESTS }}** PRs, received **{{ STARS }}** stars across **{{ REPOSITORIES }}** personal projects and contributed to **{{ REPOSITORIES_CONTRIBUTED_TO }}** public repositories.  
+I like getting things to work first, then making them better by learning through iteration and real-world problem solving.
+
+#### 💡 Fun Facts
+
+| **Attribute**                       | **Value**                          |
+| :---                                | :---                               |
+| *languages*                         | `english` (native), `jamaican creole` (native), `japanese` (n2)|
+| *programming*                       | `python`, `java`, `ruby`, `javascript`           |
+| *github registration*               | `{{ ACCOUNT_AGE }} years ago`      |
+| *repositories*                      | `{{ REPOSITORIES }}`               |
+| *commits*                      | `{{ COMMITS }}`                    |
+| *hobbies*                             | `music`, `podcast`, `reading` ([Goodreads](https://www.goodreads.com/user/show/190731384-cargill-seiveright)), `hiking`, `skiing`, `onsen`|
+| *linkedin* | [`cargill seiveright`](https://www.linkedin.com/in/cargill-s-a074b3125/)|
+
 
 <!--
 **gill876/gill876** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
