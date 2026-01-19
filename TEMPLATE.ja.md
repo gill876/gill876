@@ -20,3 +20,14 @@
 | *趣味*                               | `音楽`, `ポッドキャスト`, `読書` ([Goodreads](https://www.goodreads.com/user/show/190731384-cargill-seiveright)), `ハイキング`, `スキー`, `温泉`|
 | *linkedin* | [`cargill seiveright`](https://www.linkedin.com/in/cargill-s-a074b3125/)|
 
+<picture>
+  <source
+    media="(prefers-color-scheme: dark)"
+    srcset="assets/img/breakout-dark.svg"
+  />
+  <source
+    media="(prefers-color-scheme: light)"
+    srcset="assets/img/breakout-light.svg"
+  />
+  <img alt="Breakout Game" src="assets/img/breakout-light.svg" />
+</picture>
