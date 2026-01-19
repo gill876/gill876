@@ -38,11 +38,9 @@ jobs:
 
       - name: Commit and force-push SVGs to target branch
         run: |
-          if [[ "$(git status --porcelain)" != "" ]]; then
-            mkdir images
-            mv /tmp/breakout-images/* images/
-            git add images
-            git commit -m "chore: update GitHub breakout SVGs" || echo "No changes to commit"
-            git pull --rebase origin main
-            git push
-          fi
+          mkdir images
+          mv /tmp/breakout-images/* images/
+          git add images
+          git commit -m "chore: update GitHub breakout SVGs" || echo "No changes to commit"
+          git pull --rebase origin main
+          git push
