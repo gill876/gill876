@@ -23,13 +23,13 @@ I like getting things to work first, then making them better by learning through
 <picture>
   <source
     media="(prefers-color-scheme: dark)"
-    srcset="assets/img/breakout-dark.svg"
+    srcset="images/breakout-dark.svg"
   />
   <source
     media="(prefers-color-scheme: light)"
-    srcset="assets/img/breakout-light.svg"
+    srcset="images/breakout-light.svg"
   />
-  <img alt="Breakout Game" src="assets/img/breakout-light.svg" />
+  <img alt="Breakout Game" src="images/breakout-light.svg" />
 </picture>
 
 <!--
