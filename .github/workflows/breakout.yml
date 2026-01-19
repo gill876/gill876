@@ -41,6 +41,6 @@ jobs:
           mv /tmp/breakout-images/* assets/img/
           git add assets/img/breakout-dark.svg
           git add assets/img/breakout-light.svg
-          git commit -m "chore: update GitHub breakout SVGs" || echo "No changes to commit"
+          git commit -m "Update GitHub breakout SVGs" || echo "No changes to commit"
           git pull --rebase origin main
           git push
