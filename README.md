@@ -16,20 +16,20 @@ I like getting things to work first, then making them better by learning through
 | *programming*                       | `python`, `java`, `ruby`, `javascript`           |
 | *github registration*               | `7 years ago`      |
 | *repositories*                      | `40`               |
-| *commits*                      | `4778`                    |
+| *commits*                      | `4780`                    |
 | *hobbies*                             | `music`, `podcast`, `reading` ([Goodreads](https://www.goodreads.com/user/show/190731384-cargill-seiveright)), `hiking`, `skiing`, `onsen`|
 | *linkedin* | [`cargill seiveright`](https://www.linkedin.com/in/cargill-s-a074b3125/)|
 
 <picture>
   <source
     media="(prefers-color-scheme: dark)"
-    srcset="assets/img/breakout-dark.svg"
+    srcset="images/breakout-dark.svg"
   />
   <source
     media="(prefers-color-scheme: light)"
-    srcset="assets/img/breakout-light.svg"
+    srcset="images/breakout-light.svg"
   />
-  <img alt="Breakout Game" src="assets/img/breakout-light.svg" />
+  <img alt="Breakout Game" src="images/breakout-light.svg" />
 </picture>
 
 <!--
