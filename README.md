@@ -16,7 +16,7 @@ I like getting things to work first, then making them better by learning through
 | *programming*                       | `python`, `java`, `ruby`, `javascript`           |
 | *github registration*               | `7 years ago`      |
 | *repositories*                      | `40`               |
-| *commits*                      | `4793`                    |
+| *commits*                      | `4809`                    |
 | *hobbies*                             | `music`, `podcast`, `reading` ([Goodreads](https://www.goodreads.com/user/show/190731384-cargill-seiveright)), `hiking`, `skiing`, `onsen`|
 | *linkedin* | [`cargill seiveright`](https://www.linkedin.com/in/cargill-s-a074b3125/)|
 
