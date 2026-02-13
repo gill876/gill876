@@ -16,7 +16,7 @@
 | *プログラミング*                       | `python`, `java`, `ruby`, `javascript`           |
 | *GitHub登録*                         | `7年前`      |
 | *リポジトリ数*                        | `40`               |
-| *コミット数*                          | `4927`                    |
+| *コミット数*                          | `4935`                    |
 | *趣味*                               | `音楽`, `ポッドキャスト`, `読書` ([Goodreads](https://www.goodreads.com/user/show/190731384-cargill-seiveright)), `ハイキング`, `スキー`, `温泉`|
 | *linkedin* | [`cargill seiveright`](https://www.linkedin.com/in/cargill-s-a074b3125/)|
 
