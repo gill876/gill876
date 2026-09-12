@@ -13,13 +13,35 @@
 | **属性**                             | **値**                          |
 | :---                                | :---                               |
 | *使用言語*                            | `英語` (ネイティブ), `ジャマイカ・クレオール語` (ネイティブ), `日本語` (n2)|
-| *プログラミング*                       | `python`, `java`, `ruby`, `javascript`           |
+| *プログラミング*                       | `ruby`, `python`, `java`, `javascript`, `sql`    |
+| *フレームワーク*                       | `ruby on rails`, `angularjs`, `react`, `flask`, `next.js` |
 | *GitHub登録*                         | `7年前`      |
 | *リポジトリ数*                        | `47`               |
 | *コミット数*                          | `5558`                    |
 | *趣味*                               | `音楽`, `ポッドキャスト`, `読書` ([Goodreads](https://www.goodreads.com/user/show/190731384-cargill-seiveright)), `ハイキング`, `スキー`, `温泉`|
 | *linkedin* | [`cargill seiveright`](https://www.linkedin.com/in/cargill-s-a074b3125/)|
 | *exercism* | [`gill876`](https://exercism.org/profiles/gill876)|
+
+#### 🛠️ 技術スタック
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=ruby,rails,python,java,js,html,css,postgres,docker,aws,git,react,angular,nextjs,flask" />
+</p>
+
+#### 📊 GitHub統計
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=gill876&show_icons=true&theme=dark&hide_border=true" />
+    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api?username=gill876&show_icons=true&theme=default&hide_border=true" />
+    <img src="https://github-readme-stats.vercel.app/api?username=gill876&show_icons=true&theme=default&hide_border=true" alt="GitHub Stats" />
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=gill876&layout=compact&theme=dark&hide_border=true" />
+    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=gill876&layout=compact&theme=default&hide_border=true" />
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=gill876&layout=compact&theme=default&hide_border=true" alt="Top Languages" />
+  </picture>
+</p>
 
 <picture>
   <source

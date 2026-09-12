@@ -14,13 +14,35 @@ I like getting things to work first, then making them better by learning through
 | **Attribute**                       | **Value**                          |
 | :---                                | :---                               |
 | *languages*                         | `english` (native), `jamaican creole` (native), `japanese` (n2)|
-| *programming*                       | `python`, `java`, `ruby`, `javascript`           |
+| *programming*                       | `ruby`, `python`, `java`, `javascript`, `sql`    |
+| *frameworks*                        | `ruby on rails`, `angularjs`, `react`, `flask`, `next.js` |
 | *github registration*               | `7 years ago`      |
 | *repositories*                      | `47`               |
 | *commits*                      | `5558`                    |
 | *hobbies*                             | `music`, `podcast`, `reading` ([Goodreads](https://www.goodreads.com/user/show/190731384-cargill-seiveright)), `hiking`, `skiing`, `onsen`|
 | *linkedin* | [`cargill seiveright`](https://www.linkedin.com/in/cargill-s-a074b3125/)|
 | *exercism* | [`gill876`](https://exercism.org/profiles/gill876)|
+
+#### 🛠️ Tech Stack
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=ruby,rails,python,java,js,html,css,postgres,docker,aws,git,react,angular,nextjs,flask" />
+</p>
+
+#### 📊 GitHub Stats
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=gill876&show_icons=true&theme=dark&hide_border=true" />
+    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api?username=gill876&show_icons=true&theme=default&hide_border=true" />
+    <img src="https://github-readme-stats.vercel.app/api?username=gill876&show_icons=true&theme=default&hide_border=true" alt="GitHub Stats" />
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=gill876&layout=compact&theme=dark&hide_border=true" />
+    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=gill876&layout=compact&theme=default&hide_border=true" />
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=gill876&layout=compact&theme=default&hide_border=true" alt="Top Languages" />
+  </picture>
+</p>
 
 <picture>
   <source
