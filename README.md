@@ -3,7 +3,7 @@
 </div>
 
 [![jp](https://img.shields.io/badge/lang-日本語-red.svg)](README.ja.md)
-[![resume](https://img.shields.io/badge/📄_Resume-Download-2ea44f.svg)](https://raw.githubusercontent.com/gill876/gill876/main/resume/resume.pdf)
+[![resume](https://img.shields.io/badge/📄_Resume-Download-2ea44f.svg)](https://raw.githubusercontent.com/gill876/gill876/main/resume/Cargill_Seiveright_Software_Engineer_Resume.pdf)
 
 #### 🔍 Overview
 

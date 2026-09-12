@@ -5,8 +5,11 @@ on:
     branches:
       - main
     paths:
-      - "resume/resume.tex"
+      - "resume/Cargill_Seiveright_Software_Engineer_Resume.tex"
   workflow_dispatch:
+
+env:
+  RESUME_NAME: Cargill_Seiveright_Software_Engineer_Resume
 
 jobs:
   build:
@@ -21,7 +24,7 @@ jobs:
       - name: Compile LaTeX resume
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: resume.tex
+          root_file: ${{ env.RESUME_NAME }}.tex
           working_directory: resume
 
       - name: Configure git
@@ -31,7 +34,7 @@ jobs:
 
       - name: Commit and push compiled PDF
         run: |
-          git add resume/resume.pdf
+          git add "resume/${RESUME_NAME}.pdf"
           git commit -m "Build resume PDF" || echo "No changes to commit"
           git pull --rebase origin main
           git push
