@@ -1,5 +1,34 @@
 <div align="center">
-  <img style="width: 100%; border-radius: 6px;" src="assets/img/GitHub-Cover-ja.png" />
+  <picture>
+    <source
+      media="(prefers-color-scheme: dark)"
+      srcset="https://capsule-render.vercel.app/api?type=waving&color=0:0B0F19,100:1A3D63&height=200&section=header&text=Cargill%20Seiveright&fontSize=50&fontColor=ffffff&fontAlignY=35&animation=fadeIn"
+    />
+    <source
+      media="(prefers-color-scheme: light)"
+      srcset="https://capsule-render.vercel.app/api?type=waving&color=0:1A3D63,100:38BDF8&height=200&section=header&text=Cargill%20Seiveright&fontSize=50&fontColor=ffffff&fontAlignY=35&animation=fadeIn"
+    />
+    <img
+      style="width: 100%; border-radius: 6px;"
+      src="https://capsule-render.vercel.app/api?type=waving&color=0:1A3D63,100:38BDF8&height=200&section=header&text=Cargill%20Seiveright&fontSize=50&fontColor=ffffff&fontAlignY=35&animation=fadeIn"
+      alt="Cargill Seiveright"
+    />
+  </picture>
+  <br />
+  <picture>
+    <source
+      media="(prefers-color-scheme: dark)"
+      srcset="https://readme-typing-svg.demolab.com/?font=Noto+Sans+JP&size=22&pause=1000&color=38BDF8&center=true&vCenter=true&width=600&lines=%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2;%E8%87%AA%E7%84%B6%E8%A8%80%E8%AA%9E%E5%87%A6%E7%90%86%E7%A0%94%E7%A9%B6%E8%80%85;Rails%E3%83%87%E3%83%99%E3%83%AD%E3%83%83%E3%83%91%E3%83%BC"
+    />
+    <source
+      media="(prefers-color-scheme: light)"
+      srcset="https://readme-typing-svg.demolab.com/?font=Noto+Sans+JP&size=22&pause=1000&color=1A3D63&center=true&vCenter=true&width=600&lines=%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2;%E8%87%AA%E7%84%B6%E8%A8%80%E8%AA%9E%E5%87%A6%E7%90%86%E7%A0%94%E7%A9%B6%E8%80%85;Rails%E3%83%87%E3%83%99%E3%83%AD%E3%83%83%E3%83%91%E3%83%BC"
+    />
+    <img
+      src="https://readme-typing-svg.demolab.com/?font=Noto+Sans+JP&size=22&pause=1000&color=1A3D63&center=true&vCenter=true&width=600&lines=%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2;%E8%87%AA%E7%84%B6%E8%A8%80%E8%AA%9E%E5%87%A6%E7%90%86%E7%A0%94%E7%A9%B6%E8%80%85;Rails%E3%83%87%E3%83%99%E3%83%AD%E3%83%83%E3%83%91%E3%83%BC"
+      alt="Typing SVG"
+    />
+  </picture>
 </div>
 
 [![en](https://img.shields.io/badge/lang-en-blue.svg)](README.md)
