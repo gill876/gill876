@@ -1,0 +1,125 @@
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[top=0.3in,bottom=0.3in,left=0.7in,right=0.7in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{ragged2e}
+
+\definecolor{accent}{HTML}{1A3D63}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\RaggedRight
+
+\titleformat{\section}{\large\bfseries\color{accent}}{}{0em}{}[\vspace{-4pt}\titlerule]
+\titlespacing{\section}{0pt}{4pt}{2pt}
+
+\setlist[itemize]{leftmargin=14pt, itemsep=0pt, topsep=0pt, parsep=0pt}
+
+\newcommand{\role}[4]{%
+  \textbf{#1} \hfill \textit{#3}\\
+  \textit{#2} \hfill \textit{#4}\\[0pt]
+}
+
+\begin{document}
+
+% ---------- Header ----------
+\begin{center}
+  {\LARGE \textbf{Cargill Seiveright}}\\[3pt]
+  {\large Software Engineer}\\[6pt]
+  \small
+  Shinjuku, Tokyo, Japan \quad $\vert$ \quad
+  \href{mailto:coolgill12@gmail.com}{coolgill12@gmail.com} \quad $\vert$ \quad
+  +81 80-3853-9559 \\[0pt]
+  \href{https://github.com/gill876}{github.com/gill876} \quad $\vert$ \quad
+  \href{https://www.linkedin.com/in/cargill-s-a074b3125/}{linkedin.com/in/cargill-s-a074b3125}
+\end{center}
+
+% ---------- Profile ----------
+\section*{Profile}
+Software engineer based in Tokyo with production experience in Ruby on Rails and full-stack web
+development, plus a research background in applied NLP with large language models. Currently
+responsible for error triage across production and staging, and for authoring OpenAPI
+specifications, for a customer-facing real-estate investment platform serving native iOS and
+Android apps. Comfortable working cross-functionally with partner engineering teams in Japanese
+(JLPT N2).
+
+% ---------- Experience ----------
+\section*{Experience}
+
+\role{App Engineer}{GA Technologies}{2024/11 -- Present}{Roppongi Ichome, Tokyo, Japan}
+\begin{itemize}
+  \item Own error triage on production and staging for OWNR, GA Technologies' customer-facing
+    real-estate investment platform that integrates with 14 internal and external services across
+    4 engineering teams: classify issues from Rollbar alerts as domain-service, infrastructure, or
+    application bugs, investigate via CloudWatch, CloudTrail, and ECS container logs, cross-check
+    against a Snowflake data mirror, and coordinate with domain-service owners to confirm
+    root-cause hypotheses.
+  \item Author and reconcile OpenAPI specifications against live implementations for OWNR's APIs
+    (30+ endpoints so far, out of 100+) as part of a company-wide initiative to eliminate
+    duplicated, stale API documentation across provider and consumer services, including the iOS
+    and Android client teams.
+  \item Identified and resolved production data-integrity incidents on two occasions, coordinating
+    with domain-service owners to correct the underlying inconsistency and confirm the fix.
+  \item Migrated legacy RSpec fixtures to FactoryBot, improving test readability and
+    reproducibility, and replaced persistent \texttt{create} calls with in-memory \texttt{build}
+    calls where possible to speed up CI/CD test runs.
+\end{itemize}
+
+\vspace{0pt}
+\role{Software Developer}{Artuvic Limited}{2021/03 -- 2022/08}{Kingston, Jamaica (Remote)}
+\begin{itemize}
+  \item Led frontend and backend enhancements for a nationwide courier platform (AngularJS, Java
+    Play Framework), including model design for a new system and CSV-driven API integrations.
+  \item Designed and implemented role-based access control and security features; built internal
+    admin tools for operations and user management.
+  \item Wrote JUnit unit tests for new system components and managed releases via Sourcetree.
+\end{itemize}
+
+% ---------- Research \& Internships ----------
+\section*{Research \& Internships}
+
+\role{Research Intern, NLP}{Fujitsu Ltd.}{2023/09 (3 weeks)}{Kanagawa, Japan (Remote)}
+\begin{itemize}
+  \item Surveyed tokenization and embedding methods for low-resource NLP domains, focused on
+    endangered-species corpora, and presented technical recommendations to Fujitsu's NLP Research
+    team.
+\end{itemize}
+
+\vspace{0pt}
+\role{Software Intern}{The Palisadoes Foundation -- Calico Challenge}{2020/06 -- 2020/08}{Kingston, Jamaica (Remote)}
+\begin{itemize}
+  \item Implemented encrypted communication between a central API and distributed data-collection
+    agents for an open-source monitoring system (Pattoo) in Python, and built a React/Tailwind CSS
+    admin portal for managing users, agents, and data pipelines.
+\end{itemize}
+
+% ---------- Master's Research ----------
+\section*{Master's Research}
+\begin{itemize}\sloppy
+  \item Designed and evaluated an LLM-based pipeline to convert taxonomic Named Entity Recognition
+    (NER) datasets from Standoff to CoNLL format, benchmarking accuracy against rule-based
+    conversion systems.
+  \item Demonstrated the approach as a viable alternative to rule-based conversion, improving
+    dataset interoperability and model training throughput.
+\end{itemize}
+
+% ---------- Education ----------
+\section*{Education}
+\textbf{Nara Institute of Science and Technology (NAIST)} \hfill 2022/10 -- 2024/09\\
+\textit{Master of Engineering, Natural Language Processing} \hfill \textit{Nara, Japan}\\
+MEXT (Monbukagakusho) Scholarship recipient, Japanese Embassy recommendation\\[0pt]
+\textbf{The University of the West Indies, Mona} \hfill 2018/08 -- 2021/09\\
+\textit{Bachelor of Science, Computer Science (Minor: Japanese)} \hfill \textit{Kingston, Jamaica}
+
+% ---------- Skills ----------
+\section*{Skills}
+\textbf{Languages:} Ruby, Python, Java, JavaScript, SQL \\
+\textbf{Frameworks:} Ruby on Rails, AngularJS, React, Flask, Next.js \\
+\textbf{Infrastructure:} Docker, AWS (ECS, CloudWatch, CloudTrail), PostgreSQL, Snowflake \\
+\textbf{Practices/Tools:} RSpec, FactoryBot, TDD, OpenAPI, Git \\
+\textbf{Spoken Languages:} English (native), Japanese (JLPT N2, business working proficiency)
+
+\end{document}
