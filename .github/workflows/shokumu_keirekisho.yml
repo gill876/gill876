@@ -1,0 +1,53 @@
+name: Update shokumu keirekisho
+
+on:
+  schedule:
+    - cron: "0 11 * * *" # every 24 hours, same time as stats.yml/breakout.yml
+  push:
+    branches:
+      - main
+    paths:
+      - "shokumu_keirekisho/update_shokumu_keirekisho.py"
+      - "shokumu_keirekisho/職務経歴書シーブライトカーギルドゥジョン_original_backup.docx"
+  workflow_dispatch:
+
+jobs:
+  build:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install Python dependencies
+        run: pip install python-docx python-dateutil
+
+      - name: Regenerate docx with fresh dates/tenure
+        working-directory: shokumu_keirekisho
+        run: python3 update_shokumu_keirekisho.py
+
+      - name: Install LibreOffice + Japanese fonts
+        run: sudo apt-get update && sudo apt-get install -y libreoffice-writer fonts-noto-cjk
+
+      - name: Convert to PDF
+        working-directory: shokumu_keirekisho
+        run: soffice --headless --convert-to pdf "職務経歴書シーブライトカーギルドゥジョン.docx"
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit and push
+        run: |
+          git add "shokumu_keirekisho/職務経歴書シーブライトカーギルドゥジョン.docx" "shokumu_keirekisho/職務経歴書シーブライトカーギルドゥジョン.pdf"
+          git commit -m "Update shokumu keirekisho" || echo "No changes to commit"
+          git pull --rebase origin main
+          git push

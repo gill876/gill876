@@ -32,6 +32,8 @@
 </div>
 
 [![en](https://img.shields.io/badge/lang-en-blue.svg)](README.md)
+[![職務経歴書](https://img.shields.io/badge/📄_職務経歴書-ダウンロード-2ea44f.svg)](https://raw.githubusercontent.com/gill876/gill876/main/shokumu_keirekisho/%E8%81%B7%E5%8B%99%E7%B5%8C%E6%AD%B4%E6%9B%B8%E3%82%B7%E3%83%BC%E3%83%96%E3%83%A9%E3%82%A4%E3%83%88%E3%82%AB%E3%83%BC%E3%82%AE%E3%83%AB%E3%83%89%E3%82%A5%E3%82%B8%E3%83%A7%E3%83%B3.pdf)
+[![履歴書](https://img.shields.io/badge/📧_履歴書-メールでリクエスト-blue.svg)](mailto:coolgill12@gmail.com?subject=%E5%B1%A5%E6%AD%B4%E6%9B%B8%E3%81%AE%E3%81%94%E8%AB%8B%E6%B1%82&body=%E3%82%B7%E3%83%BC%E3%83%96%E3%83%A9%E3%82%A4%E3%83%88%E6%A7%98%0A%0A%E3%81%8A%E4%B8%96%E8%A9%B1%E3%81%AB%E3%81%AA%E3%81%A3%E3%81%A6%E3%81%8A%E3%82%8A%E3%81%BE%E3%81%99%E3%80%82%0A%E5%B1%A5%E6%AD%B4%E6%9B%B8%E3%82%92%E3%81%94%E9%80%81%E4%BB%98%E3%81%84%E3%81%9F%E3%81%A0%E3%81%91%E3%81%BE%E3%81%99%E3%81%A8%E5%B9%B8%E3%81%84%E3%81%A7%E3%81%99%E3%80%82%0A%E4%BD%95%E5%8D%92%E3%82%88%E3%82%8D%E3%81%97%E3%81%8F%E3%81%8A%E9%A1%98%E3%81%84%E3%81%84%E3%81%9F%E3%81%97%E3%81%BE%E3%81%99%E3%80%82)
 
 #### 🔍 概要
 
