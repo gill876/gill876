@@ -46,9 +46,9 @@
 | *使用言語*                            | `英語` (ネイティブ), `ジャマイカ・クレオール語` (ネイティブ), `日本語` (n2)|
 | *プログラミング*                       | `ruby`, `python`, `java`, `javascript`, `sql`    |
 | *フレームワーク*                       | `ruby on rails`, `angularjs`, `react`, `flask`, `next.js` |
-| *GitHub登録*                         | `7年前`      |
-| *リポジトリ数*                        | `47`               |
-| *コミット数*                          | `5593`                    |
+| *GitHub登録*                         | `8年前`      |
+| *リポジトリ数*                        | `48`               |
+| *コミット数*                          | `5599`                    |
 | *趣味*                               | `音楽`, `ポッドキャスト`, `読書` ([Goodreads](https://www.goodreads.com/user/show/190731384-cargill-seiveright)), `ハイキング`, `スキー`, `温泉`|
 | *linkedin* | [`cargill seiveright`](https://www.linkedin.com/in/cargill-s-a074b3125/)|
 | *exercism* | [`gill876`](https://exercism.org/profiles/gill876)|
