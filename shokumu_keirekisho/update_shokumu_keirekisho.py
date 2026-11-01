@@ -497,7 +497,7 @@ set_cell_blocks(ga_table.rows[3].cells[1], [
         "【業務内容】\n"
         "・Rollbar起点のエラートリアージ：\n"
         "エラーの原因がドメインサービス・インフラ・アプリケーションのどこにあるかを切り分け、"
-        "CloudWatch、CloudTrail、ECSのログ、Snowflakeのミラーを用いて調査。\n\n"
+        "CloudWatch（ECSのコンテナログ・メトリクス）、CloudTrail、Snowflakeのミラーを用いて調査。\n\n"
         "・エラー調査の効率化（自ら導入）：\n"
         "本番エラーの調査に1〜2日かかっていたため、チームで初めてSnowflake CLIをClaude Codeに"
         "連携し、調査時間を1時間以内に短縮。さらに調査手順をClaude Codeのスキルにまとめて社内の"
@@ -511,8 +511,8 @@ set_cell_blocks(ga_table.rows[3].cells[1], [
 set_cell_blocks(ga_table.rows[4].cells[1], [
     (
         "・メモリ断片化の兆候への対応（自ら提案）：\n"
-        "メモリ監視の結果からメモリ断片化（フラグメンテーション）の兆候に気づき、原因を切り分けるためのツールの導入を"
-        "自ら提案。\n\n"
+        "発生していた問題がメモリ断片化（フラグメンテーション）によるものかを、アプリのサイドカーで収集している"
+        "Datadogのメモリメトリクスで確認。その兆候を踏まえ、原因を切り分けるためのツールの導入を自ら提案。\n\n"
         "・エスカレーション時の報告の改善：\n"
         "報告の構成を「対応要否 → 影響範囲 → 原因」の順に変え、エスカレーション時の確認の"
         "やり取りを不要にした。\n\n"
@@ -540,7 +540,7 @@ set_cell_blocks(ga_table.rows[3].cells[2], [(
     "【言語】\nRuby\nShell Script\nHTML\nCSS\nJavaScript\n\n"
     "【フレームワーク】\nRuby on Rails\n\n"
     "【DB】\nPostgreSQL\nSnowflake（参照）\n\n"
-    "【インフラ・監視】\nAWS（ECS, CloudWatch, CloudTrail）\nRollbar\n\n"
+    "【インフラ・監視】\nAWS（ECS, CloudWatch, CloudTrail）\nRollbar\nDatadog\n\n"
     "【ツール】\nRSpec\nFactoryBot\nDocker\nOpenAPI\nGit\nClaude Code\nSnowflake CLI",
     False,
 )])

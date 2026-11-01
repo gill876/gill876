@@ -6,6 +6,7 @@
 \usepackage{titlesec}
 \usepackage{xcolor}
 \usepackage{ragged2e}
+\usepackage{needspace}
 
 \definecolor{accent}{HTML}{1A3D63}
 
@@ -60,14 +61,15 @@ production. Works in Japanese with partner teams (JLPT N2).
     customer-facing apps (iOS, Android, web) of RENOSY, GA technologies' real-estate investment
     service; the backend integrates with 14 internal and external services across 5 engineering
     teams. Isolate whether the cause is a domain service, infrastructure, or the application, and
-    investigate through CloudWatch, CloudTrail, ECS logs, and a Snowflake mirror.
+    investigate through CloudWatch (ECS container logs and metrics), CloudTrail, and a Snowflake
+    mirror.
   \item Cut error investigations from 1--2 days to under an hour by being the first on the team to
     connect the Snowflake CLI to Claude Code; packaged the investigation steps as a Claude Code skill
     and published it on the internal marketplace so anyone on the team can use it.
   \item Identified three production data inconsistencies, one of which no one had known about, and
     worked with the domain teams to correct them.
-  \item Spotted signs of memory fragmentation in memory monitoring and proposed adopting a tool to isolate
-    the cause.
+  \item Checked whether an ongoing issue was memory fragmentation using Datadog memory metrics from
+    the app's sidecar agent, found signs of it, and proposed adopting a tool to isolate the cause.
   \item Restructured escalation reports as ``action needed $\rightarrow$ impact $\rightarrow$
     cause'', removing the follow-up questions that used to come back on each escalation.
   \item Wrote and corrected OpenAPI specs for 30+ of the backend's 100+ endpoints, checking each against
@@ -114,6 +116,8 @@ production. Works in Japanese with partner teams (JLPT N2).
 \end{itemize}
 
 % ---------- Projects ----------
+% keep the heading with the start of its first entry instead of stranding it at a page foot
+\needspace{6\baselineskip}
 \section*{Projects}
 \begin{itemize}\sloppy
   \item \extlink{https://kechi-plus-g6bg.web.app}{\textbf{Kechi+}} (2026/10 -- Present,
