@@ -18,6 +18,9 @@
 
 \setlist[itemize]{leftmargin=14pt, itemsep=0pt, topsep=0pt, parsep=0pt}
 
+% external link: accent-colored so it reads as a link but still line-breaks
+\newcommand{\extlink}[2]{\href{#1}{\color{accent}#2}}
+
 \newcommand{\role}[4]{%
   \textbf{#1} \hfill \textit{#3}\\
   \textit{#2} \hfill \textit{#4}\\[0pt]
@@ -39,33 +42,49 @@
 
 % ---------- Profile ----------
 \section*{Profile}
-Software engineer based in Tokyo with production experience in Ruby on Rails and full-stack web
-development, plus a research background in applied NLP with large language models. Currently
-responsible for error triage across production and staging, and for authoring OpenAPI
-specifications, for a customer-facing real-estate investment platform serving native iOS and
-Android apps. Comfortable working cross-functionally with partner engineering teams in Japanese
-(JLPT N2).
+Software engineer in Tokyo working on production Ruby on Rails, with a research background in NLP
+and LLM-based data processing (M.Eng., NAIST). At GA technologies I triage production errors for a
+real-estate investment service, RENOSY; I brought Claude Code and Snowflake into that work, cutting
+investigations from 1--2 days to under an hour, and made the process available to the whole team.
+In personal projects I benchmarked vision models to design a receipt-reading budget app that I run in
+production and use every week. Aiming to be an engineer who runs AI/LLM products reliably in
+production. Works in Japanese with partner teams (JLPT N2).
 
 % ---------- Experience ----------
 \section*{Experience}
 
-\role{App Engineer}{GA Technologies}{2024/11 -- Present}{Roppongi Ichome, Tokyo, Japan}
+\role{App Engineer}{GA technologies Co., Ltd.}{2024/11 -- Present}{Roppongi Ichome, Tokyo, Japan}
+\textit{RENOSY backend team (2026/05 -- Present, team of 15)}
 \begin{itemize}
-  \item Own error triage on production and staging for OWNR, GA Technologies' customer-facing
-    real-estate investment platform that integrates with 14 internal and external services across
-    4 engineering teams: classify issues from Rollbar alerts as domain-service, infrastructure, or
-    application bugs, investigate via CloudWatch, CloudTrail, and ECS container logs, cross-check
-    against a Snowflake data mirror, and coordinate with domain-service owners to confirm
-    root-cause hypotheses.
-  \item Author and reconcile OpenAPI specifications against live implementations for OWNR's APIs
-    (30+ endpoints so far, out of 100+) as part of a company-wide initiative to eliminate
-    duplicated, stale API documentation across provider and consumer services, including the iOS
-    and Android client teams.
-  \item Identified and resolved production data-integrity incidents on two occasions, coordinating
-    with domain-service owners to correct the underlying inconsistency and confirm the fix.
-  \item Migrated legacy RSpec fixtures to FactoryBot, improving test readability and
-    reproducibility, and replaced persistent \texttt{create} calls with in-memory \texttt{build}
-    calls where possible to speed up CI/CD test runs.
+  \item Triage production and staging errors from Rollbar alerts for the backend behind the
+    customer-facing apps (iOS, Android, web) of RENOSY, GA technologies' real-estate investment
+    service; the backend integrates with 14 internal and external services across 5 engineering
+    teams. Isolate whether the cause is a domain service, infrastructure, or the application, and
+    investigate through CloudWatch, CloudTrail, ECS logs, and a Snowflake mirror.
+  \item Cut error investigations from 1--2 days to under an hour by being the first on the team to
+    connect the Snowflake CLI to Claude Code; packaged the investigation steps as a Claude Code skill
+    and published it on the internal marketplace so anyone on the team can use it.
+  \item Identified three production data inconsistencies, one of which no one had known about, and
+    worked with the domain teams to correct them.
+  \item Spotted signs of memory fragmentation in memory monitoring and proposed adopting a tool to isolate
+    the cause.
+  \item Restructured escalation reports as ``action needed $\rightarrow$ impact $\rightarrow$
+    cause'', removing the follow-up questions that used to come back on each escalation.
+  \item Wrote and corrected OpenAPI specs for 30+ of the backend's 100+ endpoints, checking each against
+    the implementation, as part of a company-wide effort to end duplicated API docs between
+    providers and consumers; coordinated with teams including iOS and Android.
+  \item Set up a release check that verifies new features on both mobile and web; migrated RSpec
+    fixtures to FactoryBot and replaced \texttt{create} with \texttt{build} to shorten CI runs.
+\end{itemize}
+\textit{Internal learning \& work-management platform (2024/11 -- 2026/04, sole developer)}
+\begin{itemize}
+  \item Built a full-stack Rails app that tracks employee learning progress and work hours in one
+    place, owning basic and detailed design, DB modeling, API/frontend implementation, and tests.
+  \item Designed many-to-many models with strict business-rule validations; implemented
+    session-based authentication and authorization for nested resources.
+  \item Wrote 300+ lines of RSpec\slash FactoryBot tests covering boundary values and edge cases; kept the
+    code maintainable with helper extraction and RuboCop; localized the UI with a Japanese locale
+    file; automated DB backup\slash restore with shell scripts to cut dev-environment setup effort.
 \end{itemize}
 
 \vspace{0pt}
@@ -78,8 +97,65 @@ Android apps. Comfortable working cross-functionally with partner engineering te
   \item Wrote JUnit unit tests for new system components and managed releases via Sourcetree.
 \end{itemize}
 
-% ---------- Research \& Internships ----------
-\section*{Research \& Internships}
+% ---------- Research \& Publications ----------
+\section*{Research \& Publications}
+\begin{itemize}\sloppy
+  \item \textbf{Master's thesis:} \extlink{https://library.naist.jp/opac/en/book/111663}{Can
+    Large Language Models Outperform Rule-based Dataset Converters for Taxonomic Entities?} (NAIST,
+    2024). Designed and evaluated an LLM pipeline that converts taxon NER datasets from Standoff to
+    CoNLL format, handling the entity-boundary offsets, stray whitespace, and mixed character
+    encodings that break rule-based converters; GPT-4o plus post-processing reached F1 $\geq$ 0.99
+    on all three datasets.
+  \item \textbf{Co-author (2nd author):} \extlink{https://arxiv.org/abs/2403.15430}{Distilling
+    Named Entity Recognition Models for Endangered Species from Large Language Models} (arXiv,
+    2024). Generated 3,600 synthetic NER and relation-extraction sentences about endangered species
+    with GPT-4 to distill into small BERT models; responsible for prompt design for data generation,
+    fact-checking against the IUCN Red List, and writing part of the paper.
+\end{itemize}
+
+% ---------- Projects ----------
+\section*{Projects}
+\begin{itemize}\sloppy
+  \item \extlink{https://kechi-plus-g6bg.web.app}{\textbf{Kechi+}} (2026/10 -- Present,
+    used weekly): a budget app that reads Japanese receipts from a photo (items, prices, tax
+    category) and compares unit prices by store and month. Planned it and made the design decisions;
+    built and operated it with Claude Code.
+    \begin{itemize}
+      \item Benchmarked 11 vision models on GMI Cloud against my own receipts for accuracy, cost,
+        and speed; chose a fast model for first reads, with a stronger model re-reading only when
+        the totals don't add up.
+      \item Trunk-based development; GitHub Actions deploys to Cloud Run after lint and tests pass,
+        then smoke-tests the live site; keyless auth via Workload Identity Federation. Monitoring
+        with Sentry (errors, traces, per-release tracking), Grafana dashboards, SLOs, and a runbook.
+      \item Python (FastAPI), Next.js/TypeScript, PostgreSQL (Cloud SQL), Cloud Run, Firebase
+        Authentication.
+    \end{itemize}
+  \item \extlink{https://github.com/gill876/trunk-development-feature-flag}{\textbf{Flagship}}
+    (2026): a lab for trunk-based development, feature flags, and canary releases. Planned it and
+    made the design decisions; built and operated it with Claude Code.
+    \begin{itemize}
+      \item Every merge to main deploys a new Cloud Run revision at 0\% traffic, released through a
+        0\% $\rightarrow$ 10\% $\rightarrow$ 100\% canary.
+      \item Feature flags built on Rails configuration without a gem: segment targeting (dev, alpha,
+        beta), sticky per-user percentage rollout, and a kill switch.
+      \item Because old and new revisions serve side by side during a canary, CI uses oasdiff to
+        block breaking OpenAPI changes.
+      \item 12 bots browse as users, and a dashboard shows which revision and flag state served
+        each one; monitored with Sentry, Grafana, and SLOs. Rails 8.1, Cloud Run, Firestore, GitHub
+        Actions (Brakeman, bundler-audit, RuboCop).
+    \end{itemize}
+  \item \extlink{https://zenn.dev/hackathons/google-cloud-japan-ai-hackathon-vol5/projects/bf01c70153667d}{\textbf{5th
+    Agentic AI Hackathon with Google Cloud}} (2026): planned and built AsobiAgent solo, an AI agent
+    that plans group outings in LINE groups. Owned the planning and design decisions and directed
+    Claude Code and Antigravity to implement it. Chose not to let the AI book restaurants by phone,
+    given the corporate contract it requires and the burden on restaurants; a person places the call
+    with one tap instead. Vertex AI (Gemini), Cloud Run, Firestore, Secret Manager, LINE (LIFF),
+    Ekispert API, Hot Pepper API.
+  \item Competed in the ACM ICPC as an undergraduate.
+\end{itemize}
+
+% ---------- Internships ----------
+\section*{Internships}
 
 \role{Research Intern, NLP}{Fujitsu Ltd.}{2023/09 (3 weeks)}{Kanagawa, Japan (Remote)}
 \begin{itemize}
@@ -96,16 +172,6 @@ Android apps. Comfortable working cross-functionally with partner engineering te
     admin portal for managing users, agents, and data pipelines.
 \end{itemize}
 
-% ---------- Master's Research ----------
-\section*{Master's Research}
-\begin{itemize}\sloppy
-  \item Designed and evaluated an LLM-based pipeline to convert taxonomic Named Entity Recognition
-    (NER) datasets from Standoff to CoNLL format, benchmarking accuracy against rule-based
-    conversion systems.
-  \item Demonstrated the approach as a viable alternative to rule-based conversion, improving
-    dataset interoperability and model training throughput.
-\end{itemize}
-
 % ---------- Education ----------
 \section*{Education}
 \textbf{Nara Institute of Science and Technology (NAIST)} \hfill 2022/10 -- 2024/09\\
@@ -116,10 +182,13 @@ MEXT (Monbukagakusho) Scholarship recipient, Japanese Embassy recommendation\\[0
 
 % ---------- Skills ----------
 \section*{Skills}
-\textbf{Languages:} Ruby, Python, Java, JavaScript, SQL \\
-\textbf{Frameworks:} Ruby on Rails, AngularJS, React, Flask, Next.js \\
-\textbf{Infrastructure:} Docker, AWS (ECS, CloudWatch, CloudTrail), PostgreSQL, Snowflake \\
-\textbf{Practices/Tools:} RSpec, FactoryBot, TDD, OpenAPI, Git \\
+\textbf{Languages:} Ruby, Python, TypeScript, Java, JavaScript, SQL \\
+\textbf{Frameworks:} Ruby on Rails, FastAPI, Next.js, React, AngularJS, Flask \\
+\textbf{Cloud \& Data:} AWS (ECS, CloudWatch, CloudTrail), Google Cloud (Cloud Run, Cloud SQL,
+Firestore), Docker, PostgreSQL, Snowflake \\
+\textbf{Observability \& CI:} Sentry, Grafana, Rollbar, GitHub Actions \\
+\textbf{Practices/Tools:} RSpec, FactoryBot, TDD, OpenAPI, Claude Code, trunk-based development,
+feature flags, canary releases, Git \\
 \textbf{Spoken Languages:} English (native), Japanese (JLPT N2, business working proficiency)
 
 \end{document}
