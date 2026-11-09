@@ -29,6 +29,7 @@ import re
 from datetime import date
 
 import docx
+from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 from docx.text.paragraph import Paragraph
@@ -249,12 +250,9 @@ FLUENT = "通常使用に問題なし"
 PERSONAL = "個人開発で使用"
 SPAN = object()  # note continues the one above (vertically merged cell)
 
+# The source's 担当業務 rows (実装・テスト・運用保守) are left out: the project
+# tables already show those phases.
 SKILLS = [
-    ("担当業務", [
-        ("実装", refresh_duration("3年"), ""),
-        ("テスト", refresh_duration("3年"), ""),
-        ("運用保守", refresh_duration("1年5ヶ月"), ""),
-    ]),
     ("OS・開発環境", [
         ("macOS", refresh_duration("4年"), ""),
         ("Linux", "8年", ""),
@@ -290,7 +288,6 @@ SKILLS = [
     ]),
     ("DB", [
         ("MySQL", "2年", "DB移行経験ありテーブル設計可能/調べながらであれば作業可能/大学で使用"),
-        ("phpMyAdmin", "1年5ヶ月", SPAN),
         ("PostgreSQL", "2年", SPAN),
         ("Firestore", tenure_since(2026, 9), PERSONAL),
     ]),
@@ -300,6 +297,8 @@ SKILLS = [
         ("OpenAPI", tenure_since(*BACKEND_TEAM_START), "業務・個人開発で使用"),
         ("Sentry", tenure_since(2026, 10), PERSONAL),
         ("Grafana", tenure_since(2026, 10), PERSONAL),
+        # a DB admin tool, so it sits with the tools rather than under DB
+        ("phpMyAdmin", "1年5ヶ月", "前職でMySQLの管理に使用"),
     ]),
 ]
 
@@ -307,8 +306,10 @@ skills_table = d.tables[0]
 old_rows = [row._tr for row in skills_table.rows[1:]]
 
 # Guard against transcription slips: every skill in the source must appear
-# above with the same years and note, unless it's one we deliberately change.
-CHANGED = {"実装", "テスト", "運用保守", "macOS", "Ruby", "Ruby on Rails", "Python", "Next.js"}
+# above with the same years and note, unless it's one we deliberately change
+# or drop.
+CHANGED = {"実装", "テスト", "運用保守", "macOS", "Ruby", "Ruby on Rails", "Python", "Next.js",
+           "phpMyAdmin"}
 listed = {name: (years, note) for _, items in SKILLS for name, years, note in items}
 for row in skills_table.rows[1:6]:
     names = [p.text.lstrip("・") for p in row.cells[1].paragraphs if p.text]
@@ -566,7 +567,7 @@ for row_index in (2, 4):
 # Each paragraph is a list of segments: plain text, or (text, url) for a link.
 THESIS_URL = "https://library.naist.jp/opac/en/book/111663"
 ARXIV_URL = "https://arxiv.org/abs/2403.15430"
-KECHI_URL = "https://kechi-plus-g6bg.web.app"
+KECHI_URL = "https://kechi-plus-g6bg.web.app/"
 FLAGSHIP_URL = "https://github.com/gill876/trunk-development-feature-flag"
 HACKATHON_URL = "https://zenn.dev/hackathons/google-cloud-japan-ai-hackathon-vol5/projects/bf01c70153667d"
 
@@ -593,7 +594,9 @@ new_sections = [
     BLANK,
     (HEADING, "　自己研鑽・個人開発"),
     BLANK,
-    ["・個人開発：", ("Kechi+（ケチ＋）", KECHI_URL), "（2026年10月〜、毎週自分で使用）"],
+    # The repo is private, so this links the live app, which opens on a login screen.
+    ["・個人開発：", ("Kechi+（ケチ＋）", KECHI_URL), "（ユーザー登録で利用可能）"
+     "（2026年10月〜、毎週自分で使用）"],
     ["　日本のレシートを撮影すると、品目・価格・税区分を読み取り、店舗や月ごとに単価を比較できる"
      "家計簿アプリ。企画・設計判断を担当し、Claude Codeを活用して開発・運用。"],
     ["　・AI：GMI Cloud上の11種類のビジョンモデルを、自分のレシートで精度・コスト・速度の観点から"
@@ -669,6 +672,30 @@ set_paragraph_value(P[81], (
 ))
 for p in P[82:86]:
     p._p.getparent().remove(p._p)
+
+# The source closes with 以上 above the 是非 line, which is centered. Put the
+# 是非 line straight after the 自己PR, left-aligned, so 以上 (right-aligned) ends it.
+assert P[87].text.startswith("是非、面接の機会")
+P[81]._p.addnext(P[87]._p)
+P[87].alignment = WD_ALIGN_PARAGRAPH.LEFT
+
+# ---- 7b. small text fixes from the source ----
+assert P[75].runs[0].text.endswith("、自重トレ")
+P[75].runs[0].text = P[75].runs[0].text.replace("自重トレ", "自重トレーニング")
+
+# Artuvic project title: the source's "■（Doorway Express名）" was left half-filled.
+artuvic_title = d.tables[2].rows[1].cells[1].paragraphs[0].runs
+assert [r.text for r in artuvic_title] == ["■", "（", "Doorway Express", "名）"]
+artuvic_title[1].text = "（配達向けWebアプリ「"
+artuvic_title[3].text = "」の開発）"
+
+# Artuvic 開発環境: the source lists phpMyAdmin under 【DB】. The database was
+# MySQL (confirmed by Cargill); phpMyAdmin is the tool used to manage it.
+artuvic_env = d.tables[2].rows[1].cells[2].paragraphs
+assert artuvic_env[15].text == "【DB】" and artuvic_env[16].text == "phpMyAdmin"
+assert artuvic_env[18].text == "【ツール】"
+artuvic_env[18]._p.addnext(copy.deepcopy(artuvic_env[16]._p))
+artuvic_env[16].runs[0].text = "MySQL"
 
 # ---- 8. start 開発経歴 on a new page with a real page break ----
 # The source pushes 開発経歴 to the next page with ~40 empty paragraphs after
